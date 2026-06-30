@@ -11,6 +11,8 @@
 
 一個用 SwiftUI 製作的簡單 HUD（Head-Up Display）元件，支援顯示載入指示器、動態文字，以及淡入淡出的顯示效果。HUD 透過 `ViewModifier` 疊加在既有畫面上，並由 `WWHUDUI` 控制顯示狀態與文案內容。
 
+https://github.com/user-attachments/assets/46941b8b-3301-4476-a9a2-194070e2ccda
+
 ## ✨ [功能特色](https://peterpanswift.github.io/iphone-bezels/)
 
 - 以 `@Observable` 與 `@MainActor` 管理 HUD 狀態，適合直接驅動 SwiftUI 畫面更新。

@@ -1,0 +1,15 @@
+{
+  "originHash" : "62f33f331a951bf499696787c90cd4556e0862a6def456a842d8bcbe8256f74d",
+  "pins" : [
+    {
+      "identity" : "wwhudui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/William-Weng/WWHUDUI",
+      "state" : {
+        "revision" : "2a19638895f78f1c66756ef3a98be2e4048e5c06",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

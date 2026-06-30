@@ -11,6 +11,8 @@
 
 A simple SwiftUI HUD (Head-Up Display) component that supports a loading indicator, dynamic text, and smooth fade-in/fade-out transitions. The HUD is layered on top of existing content with a `ViewModifier`, while `WWHUDUI` controls the presentation state and displayed title.
 
+https://github.com/user-attachments/assets/46941b8b-3301-4476-a9a2-194070e2ccda
+
 ## ✨ [Features](https://peterpanswift.github.io/iphone-bezels/)
 
 - Manages HUD state with `@Observable` and `@MainActor`, making it ideal for driving SwiftUI UI updates directly.
