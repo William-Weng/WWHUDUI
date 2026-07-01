@@ -68,7 +68,6 @@ private extension ToastModifier {
         
         Color.clear
             .ignoresSafeArea()
-            .allowsHitTesting(true)
     }
     
     /// HUD 卡片使用的圓角形狀

@@ -66,7 +66,7 @@ private extension LoadingModifier {
     /// HUD 背景整體
     var backgroundView: some View {
         
-        Color.clear
+        Color.black.opacity(0.001)
             .ignoresSafeArea()
             .allowsHitTesting(true)
     }

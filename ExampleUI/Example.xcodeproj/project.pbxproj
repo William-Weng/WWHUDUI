@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		810302522FF4BB8400692867 /* WWHUDUI in Frameworks */ = {isa = PBXBuildFile; productRef = 810302512FF4BB8400692867 /* WWHUDUI */; };
 		810302552FF4BBA400692867 /* WWHUDUI in Frameworks */ = {isa = PBXBuildFile; productRef = 810302542FF4BBA400692867 /* WWHUDUI */; };
-		810302582FF4BBBE00692867 /* WWHUDUI in Frameworks */ = {isa = PBXBuildFile; productRef = 810302572FF4BBBE00692867 /* WWHUDUI */; };
+		810302ED2FF4BD9400692867 /* WWHUDUI in Frameworks */ = {isa = PBXBuildFile; productRef = 810302EC2FF4BD9400692867 /* WWHUDUI */; };
+		81909BAD2FF4BFCD00795B18 /* WWHUDUI in Frameworks */ = {isa = PBXBuildFile; productRef = 81909BAC2FF4BFCD00795B18 /* WWHUDUI */; };
 		81FB85F82FF4A7DF003F69A7 /* WWHUDUI in Frameworks */ = {isa = PBXBuildFile; productRef = 81FB85F72FF4A7DF003F69A7 /* WWHUDUI */; };
 		81FB86052FF4AB84003F69A7 /* WWHUDUI in Frameworks */ = {isa = PBXBuildFile; productRef = 81FB86042FF4AB84003F69A7 /* WWHUDUI */; };
 /* End PBXBuildFile section */
@@ -31,8 +32,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81909BAD2FF4BFCD00795B18 /* WWHUDUI in Frameworks */,
 				810302552FF4BBA400692867 /* WWHUDUI in Frameworks */,
-				810302582FF4BBBE00692867 /* WWHUDUI in Frameworks */,
+				810302ED2FF4BD9400692867 /* WWHUDUI in Frameworks */,
 				810302522FF4BB8400692867 /* WWHUDUI in Frameworks */,
 				81FB86052FF4AB84003F69A7 /* WWHUDUI in Frameworks */,
 				81FB85F82FF4A7DF003F69A7 /* WWHUDUI in Frameworks */,
@@ -90,7 +92,8 @@
 				81FB86042FF4AB84003F69A7 /* WWHUDUI */,
 				810302512FF4BB8400692867 /* WWHUDUI */,
 				810302542FF4BBA400692867 /* WWHUDUI */,
-				810302572FF4BBBE00692867 /* WWHUDUI */,
+				810302EC2FF4BD9400692867 /* WWHUDUI */,
+				81909BAC2FF4BFCD00795B18 /* WWHUDUI */,
 			);
 			productName = Example;
 			productReference = 8177C5772F91CB0F00ACEA3E /* Example.app */;
@@ -121,7 +124,7 @@
 			mainGroup = 8177C56E2F91CB0F00ACEA3E;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				810302562FF4BBBE00692867 /* XCRemoteSwiftPackageReference "WWHUDUI" */,
+				81909BAB2FF4BFCC00795B18 /* XCRemoteSwiftPackageReference "WWHUDUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8177C5782F91CB0F00ACEA3E /* Products */;
@@ -365,12 +368,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		810302562FF4BBBE00692867 /* XCRemoteSwiftPackageReference "WWHUDUI" */ = {
+		81909BAB2FF4BFCC00795B18 /* XCRemoteSwiftPackageReference "WWHUDUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/William-Weng/WWHUDUI";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 1.1.0;
+				minimumVersion = 1.1.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -384,9 +387,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = WWHUDUI;
 		};
-		810302572FF4BBBE00692867 /* WWHUDUI */ = {
+		810302EC2FF4BD9400692867 /* WWHUDUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 810302562FF4BBBE00692867 /* XCRemoteSwiftPackageReference "WWHUDUI" */;
+			productName = WWHUDUI;
+		};
+		81909BAC2FF4BFCD00795B18 /* WWHUDUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81909BAB2FF4BFCC00795B18 /* XCRemoteSwiftPackageReference "WWHUDUI" */;
 			productName = WWHUDUI;
 		};
 		81FB85F72FF4A7DF003F69A7 /* WWHUDUI */ = {
