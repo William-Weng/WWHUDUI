@@ -58,13 +58,13 @@ private extension HUDModifier {
             .background(background, in: shapeView)
         }
         .transition(.opacity)
-        .allowsHitTesting(false)
+        .allowsHitTesting(true)
     }
     
     /// HUD 背景整體
     var backgroundView: some View {
         
-        Color.black.opacity(0.15)
+        Color.clear
             .ignoresSafeArea()
             .allowsHitTesting(true)
     }
