@@ -20,6 +20,6 @@ public extension View {
     ///
     /// - Returns: 套用 loading HUD 後的新 view
     func loadingOverlay(hud: WWHUDUI, background: Color = .black.opacity(0.25)) -> some View {
-        modifier(WWHUDModifier(controller: hud, background: background))
+        modifier(HUDModifier(controller: hud, background: background))
     }
 }

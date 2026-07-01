@@ -1,5 +1,5 @@
 //
-//  WWHUDModifier.swift
+//  HUDModifier.swift
 //  Wordie
 //
 //  Created by William.Weng on 2026/6/30.
@@ -10,7 +10,7 @@ import SwiftUI
 /// 一個可重用的 HUD modifier
 ///
 /// 這個 modifier 會在原本的 view 上方疊一層 HUD，當 `controller.isPresented` 為 `true` 時顯示 loading 視圖
-struct WWHUDModifier: ViewModifier {
+struct HUDModifier: ViewModifier {
     
     var controller: WWHUDUI         // 控制 HUD 顯示狀態與文字內容的物件
     var background: Color           // HUD 卡片的背景顏色
@@ -24,6 +24,7 @@ struct WWHUDModifier: ViewModifier {
         content
             .overlay {
                 if controller.isPresented {
+                    backgroundView
                     hudView
                 }
             }
@@ -31,7 +32,7 @@ struct WWHUDModifier: ViewModifier {
 }
 
 // MARK: - 私有屬性
-private extension WWHUDModifier {
+private extension HUDModifier {
     
     /// HUD 本體畫面
     ///
@@ -39,6 +40,7 @@ private extension WWHUDModifier {
     var hudView: some View {
         
         ZStack {
+            
             VStack(spacing: 12) {
                 ProgressView()
                     .tint(.white)
@@ -52,13 +54,23 @@ private extension WWHUDModifier {
             }
             .padding(.horizontal, 24)
             .padding(.vertical, 18)
-            .frame(minWidth: 126, minHeight: 92)
-            .background(background, in: shape)
-        }.transition(.opacity)
+            .frame(minWidth: 92, minHeight: 92)
+            .background(background, in: shapeView)
+        }
+        .transition(.opacity)
+        .allowsHitTesting(false)
+    }
+    
+    /// HUD 背景整體
+    var backgroundView: some View {
+        
+        Color.black.opacity(0.15)
+            .ignoresSafeArea()
+            .allowsHitTesting(true)
     }
     
     /// HUD 卡片使用的圓角形狀
-    var shape: RoundedRectangle {
+    var shapeView: RoundedRectangle {
         .init(cornerRadius: cornerRadius, style: .continuous)
     }
 }

@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/46941b8b-3301-4476-a9a2-194070e2ccda
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWHUDUI.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/William-Weng/WWHUDUI.git", .upToNextMajor(from: "1.0.1"))
 ]
 ```
 
