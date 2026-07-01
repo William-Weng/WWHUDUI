@@ -13,7 +13,9 @@ struct ContentView: View {
     @State private var hud = WWHUDUI()
 
     var body: some View {
+        
         VStack(spacing: 20) {
+            
             Button("Start Loading") {
                 hud.display("Loading data...")
 
@@ -23,7 +25,7 @@ struct ContentView: View {
                 }
             }
         }
-        .loadingOverlay(hud: hud)
+        .loadingOverlay(hud)
     }
 }
 

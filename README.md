@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/46941b8b-3301-4476-a9a2-194070e2ccda
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWHUDUI.git", .upToNextMajor(from: "1.0.2"))
+    .package(url: "https://github.com/William-Weng/WWHUDUI.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 
@@ -38,6 +38,13 @@ dependencies: [
 | `display(_:duration:)` | 顯示 HUD，並以指定動畫時間淡入。 |
 | `dismiss(minimumVisibleDuration:duration:)` | 關閉 HUD，並保證至少顯示指定秒數後才淡出。 |
 
+## 🧩 可用 Modifier
+
+| 方法 | 說明 |
+|---|---|
+| `loadingOverlay(_:background:)` | 在畫面上顯示 loading overlay。 |
+| `toastOverlay(_:background:)` | 在畫面下方顯示 toast overlay。 |
+
 🚀 範例畫面結構
 
 ```swift
@@ -46,6 +53,7 @@ struct ContentView: View {
     @State private var hud = WWHUDUI()
 
     var body: some View {
+    
         VStack(spacing: 20) {
             Button("開始載入") {
                 hud.display("資料載入中...")
@@ -56,7 +64,7 @@ struct ContentView: View {
                 }
             }
         }
-        .loadingOverlay(hud: hud)
+        .loadingOverlay(hud)
     }
 }
 ```

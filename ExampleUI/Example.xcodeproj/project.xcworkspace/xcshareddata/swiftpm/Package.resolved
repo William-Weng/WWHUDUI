@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/William-Weng/WWHUDUI",
       "state" : {
-        "revision" : "0c94efad784324fc2f4ddb541a9eebfda70b0c87",
-        "version" : "1.0.1"
+        "revision" : "387f90b0b23049bed44d43413c227030601fd227",
+        "version" : "1.0.2"
       }
     }
   ],

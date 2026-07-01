@@ -19,7 +19,11 @@ public extension View {
     ///   - background: HUD 卡片的背景顏色，預設為半透明黑色
     ///
     /// - Returns: 套用 loading HUD 後的新 view
-    func loadingOverlay(hud: WWHUDUI, background: Color = .black.opacity(0.25)) -> some View {
-        modifier(HUDModifier(controller: hud, background: background))
+    func loadingOverlay(_ controller: WWHUDUI, background: Color = .black.opacity(0.25)) -> some View {
+        modifier(LoadingModifier(controller: controller, background: background))
+    }
+    
+    func toastOverlay(_ controller: WWHUDUI, background: Color = .black.opacity(0.25)) -> some View {
+        modifier(ToastModifier(controller: controller, background: background))
     }
 }

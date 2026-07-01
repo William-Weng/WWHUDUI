@@ -29,7 +29,7 @@ public extension WWHUDUI {
     /// - Parameters:
     ///   - title: HUD 顯示的文字內容，預設為 `"Loading..."`
     ///   - duration: 顯示動畫時間，預設為 `0.25` 秒
-    func display(_ title: String = "Loading...", duration: TimeInterval = 0.25) {
+    func display(_ title: String, duration: TimeInterval = 0.25) {
         
         dismissTask?.cancel()
         dismissTask = nil
@@ -48,7 +48,7 @@ public extension WWHUDUI {
     ///
     /// - Parameters:
     ///   - minimumVisibleDuration: HUD 最少顯示秒數，預設為 `0.25` 秒
-    ///   - duration: 隱藏動畫時間，預設為 `0.25` 秒。
+    ///   - duration: 隱藏動畫時間，預設為 `0.25` 秒
     func dismiss(minimumVisibleDuration: TimeInterval = 0.25, duration: TimeInterval = 0.25) {
         
         dismissTask?.cancel()

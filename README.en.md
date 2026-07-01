@@ -27,7 +27,7 @@ https://github.com/user-attachments/assets/46941b8b-3301-4476-a9a2-194070e2ccda
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/William-Weng/WWHUDUI.git", .upToNextMajor(from: "1.0.2"))
+    .package(url: "https://github.com/William-Weng/WWHUDUI.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 
@@ -38,6 +38,13 @@ dependencies: [
 | `display(_:duration:)` | Shows the HUD with the specified animation duration. |
 | `dismiss(minimumVisibleDuration:duration:)` | Hides the HUD, ensuring it stays visible for at least the specified duration before fading out. |
 
+## 🧩 Available Modifiers
+
+| Method | Description |
+|---|---|
+| `loadingOverlay(hud:background:)` | Shows a loading overlay HUD. |
+| `toastOverlay(hud:background:)` | Shows a toast-style overlay at the bottom of the screen. |
+
 ## 🚀 Example
 
 ```swift
@@ -46,6 +53,7 @@ struct ContentView: View {
     @State private var hud = WWHUDUI()
 
     var body: some View {
+    
         VStack(spacing: 20) {
             Button("Start Loading") {
                 hud.display("Loading data...")
@@ -56,7 +64,7 @@ struct ContentView: View {
                 }
             }
         }
-        .loadingOverlay(hud: hud)
+        .loadingOverlay(hud)
     }
 }
 ```

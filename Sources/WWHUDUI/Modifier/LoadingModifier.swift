@@ -1,5 +1,5 @@
 //
-//  HUDModifier.swift
+//  LoadingModifier.swift
 //  Wordie
 //
 //  Created by William.Weng on 2026/6/30.
@@ -10,7 +10,7 @@ import SwiftUI
 /// 一個可重用的 HUD modifier
 ///
 /// 這個 modifier 會在原本的 view 上方疊一層 HUD，當 `controller.isPresented` 為 `true` 時顯示 loading 視圖
-struct HUDModifier: ViewModifier {
+struct LoadingModifier: ViewModifier {
     
     var controller: WWHUDUI         // 控制 HUD 顯示狀態與文字內容的物件
     var background: Color           // HUD 卡片的背景顏色
@@ -18,26 +18,28 @@ struct HUDModifier: ViewModifier {
     
     /// 建立 modifier 的實際畫面內容
     ///
-    /// 透過 `overlay` 疊上 HUD，當 `controller.isPresented` 為 `true` 時才顯示 `hudView`
+    /// 透過 `overlay` 疊上 HUD，當 `controller.isPresented` 為 `true` 時才顯示 `loadingView`
     func body(content: Content) -> some View {
         
         content
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .overlay {
                 if controller.isPresented {
                     backgroundView
-                    hudView
+                    loadingView
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
 // MARK: - 私有屬性
-private extension HUDModifier {
+private extension LoadingModifier {
     
     /// HUD 本體畫面
     ///
     /// 顯示一個 loading spinner 與文字，並套用固定尺寸、內距與圓角背景
-    var hudView: some View {
+    var loadingView: some View {
         
         ZStack {
             
@@ -50,12 +52,12 @@ private extension HUDModifier {
                     .font(.subheadline)
                     .fontWeight(.medium)
                     .foregroundStyle(.white)
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.leading)
             }
             .padding(.horizontal, 24)
             .padding(.vertical, 18)
             .frame(minWidth: 92, minHeight: 92)
-            .background(background, in: shapeView)
+            .background(background, in: shape)
         }
         .transition(.opacity)
         .allowsHitTesting(true)
@@ -70,7 +72,7 @@ private extension HUDModifier {
     }
     
     /// HUD 卡片使用的圓角形狀
-    var shapeView: RoundedRectangle {
+    var shape: RoundedRectangle {
         .init(cornerRadius: cornerRadius, style: .continuous)
     }
 }
